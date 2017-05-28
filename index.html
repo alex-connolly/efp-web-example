@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <title>EFP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+	<!-- not sure why, but bootstrap must be top -->
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- IE required polyfills, in this exact order -->
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+
+	<script src="https://code.angularjs.org/tools/system.js"></script>
+	<script src="https://code.angularjs.org/tools/typescript.js"></script>
+	<script src="https://code.angularjs.org/2.0.0-beta.17/Rx.js"></script>
+	<script src="https://code.angularjs.org/2.0.0-beta.17/angular2.dev.js"></script>
+
+  	<script>
+	  System.config({
+		  transpiler: 'typescript',
+		  typescriptOptions: { emitDecoratorMetadata: true },
+		  map: {
+			  'app': 'app',
+			  'rxjs': 'node_modules/rxjs',
+			  '@angular': 'node_modules/@angular',
+			  'zone.js': 'node_modules/zone.js',
+              'ng2-ace-editor' : 'node_modules/ng2-ace-editor',
+			  'brace' : 'node_modules/brace',
+			  'w3c-blob' : 'node_modules/w3c-blob',
+			  'buffer' : 'node_modules/buffer',
+			  'ieee754' : 'node_modules/ieee754',
+			  'base64-js' : 'node_modules/base64-js',
+		  },
+		  packages: {
+			  'app': { main: 'main.ts', defaultExtension: 'ts'},
+			  'rxjs': { main: 'Rx.js' },
+			  '@angular/forms': {main: 'index.js'},
+			  '@angular/core': { main: 'index.js' },
+			  '@angular/common': { main: 'index.js' },
+			  '@angular/compiler': { main: 'index.js' },
+			  '@angular/router': { main: 'index.js' },
+			  '@angular/platform-browser': { main: 'index.js' },
+			  '@angular/platform-browser-dynamic': { main: 'index.js' },
+			  '@angular/http': { main: 'index.js'},
+              'brace' : {main: 'index.js'},
+              'ng2-ace-editor': {main: 'ng2-ace-editor.js' },
+              'w3c-blob' : {main: 'index.js'},
+              'buffer' : {main: 'index.js'},
+              'ieee754' : {main: 'index.js'},
+              'base64-js' : {main: 'index.js'},
+		  }
+	  });
+     System.import('app/main').catch(console.error.bind(console));
+  	</script>
+<body>
+  <efp>
+	  <h2 style="margin: 10em;display: block;text-align: center;color: darkorange;">EFP</h2>
+  </efp>
+</body>
+</html>

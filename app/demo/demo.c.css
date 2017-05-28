@@ -1,0 +1,27 @@
+
+#block_container{
+    text-align: center;
+}
+
+#prototype, #file {
+    display: inline;
+}
+
+.bwrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
